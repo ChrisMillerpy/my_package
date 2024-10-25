@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools", "wheel", "setuptools_scm"]  # Build requirements
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my_package" # name of the package must match the core folder name
+dynamic = ["version"]
+description = "A test python package to practice making one."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Chris", email = "clm96@cam.ac.uk" },
+    { name = "Boris", email = "boris.bolliet@gmail.com" }
+]
+keywords = []
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Coding Newbs",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries"
+]
+
+# Runtime dependencies
+dependencies = []
+
+[project.urls]
+# "Documentation" = "https://your-readthedocs-url-here"
+# "Source" = "https://github.com/yourusername/companies_package"
+# "Issues" = "https://github.com/yourusername/companies_package/issues"
+
+
+[tool.setuptools_scm]
+write_to = "my_package/version.py"  # Where to write the dynamic version
+
+[tool.setuptools.packages.find]
+where = ["."]
