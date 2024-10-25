@@ -8,7 +8,12 @@ Test package to practice the creation of a python package.
 
 ## Installation 
 
-Not currently installable.
+Execute the following in the directory where you would like to install the package.
+```bash
+git clone https://github.com/ChrisMillerpy/my_package.git
+cd my_package
+pip install .
+```
 
 ## Usage
 
